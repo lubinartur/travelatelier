@@ -1,0 +1,6 @@
+{
+  "name": "Travel Atelier",
+  "description": "Boutique Estonian travel agency curating personalized journeys, bespoke itineraries, and tailored travel experiences.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

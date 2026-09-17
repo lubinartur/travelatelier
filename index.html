@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Atelier</title>
+    <meta name="description" content="Boutique Estonian travel agency curating personalized journeys, bespoke itineraries, and tailored travel experiences." />
+    <meta property="og:title" content="Travel Atelier" />
+    <meta property="og:description" content="Boutique Estonian travel agency curating personalized journeys, bespoke itineraries, and tailored travel experiences." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+      (function () {
+        var path = location.pathname;
+        if (path !== '/' && path !== '') return;
+        var photo = 'https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop';
+        var widths = [800, 1200, 1600, 1920, 2200];
+        var srcset = widths.map(function (w) {
+          return photo + '&w=' + w + '&q=90 ' + w + 'w';
+        }).join(', ');
+        var link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'image';
+        link.setAttribute('fetchpriority', 'high');
+        link.imageSizes = '100vw';
+        link.imageSrcset = srcset;
+        document.head.appendChild(link);
+      })();
+    </script>
+  </head>
+  <body class="bg-[#FAF8F5] text-[#161615] antialiased selection:bg-[#B85A38]/20 selection:text-[#161615]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
