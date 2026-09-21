@@ -133,7 +133,7 @@ export const EditorialImageMask: React.FC<EditorialImageMaskProps> = ({
       <div className={`relative group ${className}`}>
         <div
           ref={ref}
-          className={`${aspectRatio} rounded-2xl overflow-hidden bg-[#ECE6DA] transition-[opacity,transform] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]`}
+          className={`${aspectRatio} rounded-2xl overflow-hidden bg-[#ECE6DA] shadow-[0_16px_40px_-10px_rgba(0,0,0,0.08)] transition-[opacity,transform] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]`}
           style={
             reducedMotion
               ? {}

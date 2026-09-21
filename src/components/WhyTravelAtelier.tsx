@@ -147,7 +147,7 @@ export const WhyTravelAtelier: React.FC<WhyTravelAtelierProps> = ({ currentLang 
                     className={`group w-full text-left p-7 sm:p-8 rounded-2xl transition-all duration-400 ease-out border cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E09074]/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#181816] ${
                       isActive
                         ? 'border-white/15 bg-white/[0.05] shadow-[0_12px_30px_rgba(0,0,0,0.2)] opacity-100 -translate-y-0.5'
-                        : 'border-transparent hover:border-white/10 hover:bg-white/[0.025] opacity-60 hover:opacity-90'
+                        : 'border-transparent hover:border-white/10 hover:bg-white/[0.025] opacity-80 hover:opacity-100'
                     }`}
                   >
                     <span className="text-xs font-mono tracking-wider text-[#E09074] uppercase block mb-2 font-medium">

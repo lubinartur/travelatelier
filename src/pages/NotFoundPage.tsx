@@ -12,7 +12,7 @@ interface NotFoundPageProps {
 export const NotFoundPage: React.FC<NotFoundPageProps> = ({ currentLang, onNavigate }) => {
   const copy = translations.legal;
   const linkClass =
-    'text-[#B85A38] underline underline-offset-4 hover:text-[#181816] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#B85A38]';
+    'text-[#A04E32] underline underline-offset-4 hover:text-[#181816] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#B85A38]';
 
   return (
     <LegalDocumentLayout

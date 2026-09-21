@@ -52,6 +52,9 @@ export default function App() {
 
   useEffect(() => {
     document.documentElement.lang = currentLang.toLowerCase();
+    const description = getTranslation(translations.meta.description, currentLang);
+    document.querySelector('meta[name="description"]')?.setAttribute('content', description);
+    document.querySelector('meta[property="og:description"]')?.setAttribute('content', description);
   }, [currentLang]);
 
   useEffect(() => {

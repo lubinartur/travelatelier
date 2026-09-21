@@ -282,7 +282,7 @@ export const CuratedDestinations: React.FC<CuratedDestinationsProps> = ({
         }}
         onMouseDown={handleMouseDown}
         tabIndex={-1}
-        className={`w-full overflow-x-auto flex items-center space-x-6 sm:space-x-8 px-6 sm:px-10 lg:px-16 pb-4 select-none scrollbar-none touch-pan-x transition-colors duration-200 ${
+        className={`w-full overflow-x-auto flex items-center space-x-6 sm:space-x-8 px-6 sm:px-10 lg:px-16 pt-2 pb-14 -mb-10 select-none scrollbar-none touch-pan-x transition-colors duration-200 ${
           isDragging ? 'cursor-grabbing' : 'cursor-grab'
         }`}
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}

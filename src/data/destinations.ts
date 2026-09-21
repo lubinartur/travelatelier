@@ -1,43 +1,200 @@
-import { Destination, HowItWorksStep, TravelerStory } from '../types';
+import { Destination, HowItWorksStep } from '../types';
 
 export const destinations: Destination[] = [
   {
-    id: 'italy',
+    id: 'egypt',
     name: {
-      ET: 'Itaalia',
-      RU: 'Италия',
-      EN: 'Italy',
+      ET: 'Egiptus',
+      RU: 'Египет',
+      EN: 'Egypt',
     },
     subtitle: {
-      ET: 'Amalfi ranniku kaljud, Toscana künkad ja Dolomiitide vaikus',
-      RU: 'Амальфитанские утесы, холмы Тосканы и величие Доломитов',
-      EN: 'Amalfi cliffside hideaways, Tuscan estates and alpine serenity',
+      ET: 'Punase mere kuurordid ja ajaloolised paigad',
+      RU: 'Курорты Красного моря и исторические места',
+      EN: 'Red Sea resorts and historic sites',
     },
     region: {
-      ET: 'Lõuna- ja Kesk-Euroopa',
-      RU: 'Южная и Центральная Европа',
-      EN: 'Southern & Central Europe',
+      ET: 'Punane meri',
+      RU: 'Красное море',
+      EN: 'Red Sea',
     },
     description: {
-      ET: 'Rätsepatööna koostatud Itaalia teekonnad ühendavad privaatsed villad, oliivisalud ja ajaloolised paleed. Alates Amalfi ranniku panoraamvaadetest kuni Chianti veinimõisate ja Como järve rahuliku aristokraatiani.',
-      RU: 'Авторские маршруты по Италии объединяют приватные виллы, старинные оливковые рощи и палаццо с вековой историей: от захватывающих видов Амальфи до поместий Кьянти и безмятежности озера Комо.',
-      EN: 'Bespoke Italian journeys harmonizing historic villas, coastal cliffside retreats, and private vineyard estates — from the dramatic curves of Amalfi to quiet Tuscan mornings and Lake Como elegance.',
+      ET: 'Egiptuses saab ühendada rannapuhkuse Punase mere ääres ja ekskursioonid ajaloolistesse paikadesse. Aitame valida kuurordi, hotelli ja programmi vastavalt Sinu soovidele ja eelarvele.',
+      RU: 'В Египте можно совместить пляжный отдых на Красном море и экскурсии к историческим местам. Поможем выбрать курорт, отель и программу под ваши пожелания и бюджет.',
+      EN: 'Egypt lets you combine a beach holiday on the Red Sea with excursions to historic sites. We help you choose the resort, hotel and programme to fit your wishes and budget.',
     },
     highlights: {
       ET: [
-        'Privaatne puupaat Positano ja Capri lahtedes',
-        'Väikesed butiikhotellid ja ajaloolised masseriad',
-        'Eksklusiivsed kohalikud toiduelamused ja veiniaiad',
+        'Hurghada, Sharm el-Sheikh ja Marsa Alam kuurordid',
+        'Snorgeldamine ja sukeldumine Punases meres',
+        'Ekskursioonid Kairosse ja Luxorisse',
       ],
       RU: [
-        'Индивидуальные морские прогулки вокруг Капри',
-        'Камерные бутик-отели и старинные массерии',
-        'Аутентичные гастрономические впечатления и винодельни',
+        'Курорты Хургады, Шарм-эль-Шейха и Марса-Алам',
+        'Снорклинг и дайвинг в Красном море',
+        'Экскурсии в Каир и Луксор',
       ],
       EN: [
-        'Private wooden gozzo cruising Capri and Positano coves',
-        'Intimate boutique properties and restored masserias',
-        'Handpicked cellar tastings and secluded culinary tables',
+        'Resorts in Hurghada, Sharm el-Sheikh and Marsa Alam',
+        'Snorkelling and diving in the Red Sea',
+        'Excursions to Cairo and Luxor',
+      ],
+    },
+    bestSeason: {
+      ET: 'Kogu aasta, suvel väga kuum',
+      RU: 'Круглый год, летом очень жарко',
+      EN: 'Year-round, very hot in summer',
+    },
+    travelStyle: {
+      ET: 'Rannapuhkus, snorgeldamine ja ekskursioonid',
+      RU: 'Пляжный отдых, снорклинг и экскурсии',
+      EN: 'Beach holidays, snorkelling and excursions',
+    },
+    imageUrl: 'https://images.unsplash.com/photo-1678480258391-56b32d6939b1?auto=format&fit=crop&w=1600&q=85',
+    aspect: 'wide',
+  },
+  {
+    id: 'turkey',
+    name: {
+      ET: 'Türgi',
+      RU: 'Турция',
+      EN: 'Turkey',
+    },
+    subtitle: {
+      ET: 'Kapadookia maastikud ja Egeuse mere rannik',
+      RU: 'Пейзажи Каппадокии и побережье Эгейского моря',
+      EN: 'Cappadocian landscapes and the Aegean coast',
+    },
+    region: {
+      ET: 'Väike-Aasia & Vahemeri',
+      RU: 'Малая Азия и Средиземноморье',
+      EN: 'Asia Minor & Aegean',
+    },
+    description: {
+      ET: 'Türgis on nii rannakuurordid kui ajaloolised paigad. Aitame valida kuurordi, hotelli ja programmi vastavalt Sinu soovidele ja eelarvele.',
+      RU: 'В Турции есть и пляжные курорты, и исторические места. Поможем выбрать курорт, отель и программу под ваши пожелания и бюджет.',
+      EN: 'Turkey offers beach resorts and historic sites alike. We help you choose the resort, hotel and programme to fit your wishes and budget.',
+    },
+    highlights: {
+      ET: [
+        'Vahemere ja Egeuse mere kuurordid',
+        'Kapadookia ja Istanbul',
+        'Rannapuhkus ja ekskursioonid',
+      ],
+      RU: [
+        'Курорты Средиземного и Эгейского морей',
+        'Каппадокия и Стамбул',
+        'Пляжный отдых и экскурсии',
+      ],
+      EN: [
+        'Mediterranean and Aegean resorts',
+        'Cappadocia and Istanbul',
+        'Beach holidays and excursions',
+      ],
+    },
+    bestSeason: {
+      ET: 'Aprill – Juuni & September – November',
+      RU: 'Апрель – Июнь и Сентябрь – Ноябрь',
+      EN: 'April – June & September – November',
+    },
+    travelStyle: {
+      ET: 'Ajalugu, maastikud ja rannikuline elustiil',
+      RU: 'История, пейзажи и прибрежный стиль жизни',
+      EN: 'Living history, surreal geography, and coastal ease',
+    },
+    // Hot air balloons over Cappadocia landscape
+    imageUrl: 'https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=1400&q=85',
+    aspect: 'square',
+  },
+  {
+    id: 'tenerife',
+    name: {
+      ET: 'Tenerife',
+      RU: 'Тенерифе',
+      EN: 'Tenerife',
+    },
+    subtitle: {
+      ET: 'Teide vulkaan, rannikud ja pehme kliima aastaringselt',
+      RU: 'Вулкан Тейде, побережья и мягкий климат круглый год',
+      EN: 'Mount Teide, coastlines and a mild climate year-round',
+    },
+    region: {
+      ET: 'Kanaari saared',
+      RU: 'Канарские острова',
+      EN: 'Canary Islands',
+    },
+    description: {
+      ET: 'Tenerife sobib nii rannapuhkuseks kui loodusretkedeks. Aitame valida piirkonna saarel, hotelli ja programmi vastavalt Sinu soovidele ja eelarvele.',
+      RU: 'Тенерифе подходит и для пляжного отдыха, и для прогулок на природе. Поможем выбрать район острова, отель и программу под ваши пожелания и бюджет.',
+      EN: 'Tenerife suits both beach holidays and time in nature. We help you choose the area of the island, the hotel and the programme to fit your wishes and budget.',
+    },
+    highlights: {
+      ET: [
+        'Teide rahvuspark ja vulkaanimaastik',
+        'Los Gigantesi kaljud ja lõunaranniku rannad',
+        'Jalutuskäigud ja loodusretked',
+      ],
+      RU: [
+        'Национальный парк Тейде и вулканические пейзажи',
+        'Скалы Лос-Гигантес и пляжи юга острова',
+        'Пешие прогулки и поездки на природу',
+      ],
+      EN: [
+        'Teide National Park and volcanic landscapes',
+        'The Los Gigantes cliffs and south-coast beaches',
+        'Walks and nature excursions',
+      ],
+    },
+    bestSeason: {
+      ET: 'Kogu aasta',
+      RU: 'Круглый год',
+      EN: 'Year-round',
+    },
+    travelStyle: {
+      ET: 'Rannapuhkus ja loodus',
+      RU: 'Пляжный отдых и природа',
+      EN: 'Beach holidays and nature',
+    },
+    imageUrl: 'https://images.unsplash.com/photo-1679913156021-ab9d1e6c7a7f?auto=format&fit=crop&w=1600&q=85',
+    aspect: 'wide',
+  },
+  {
+    id: 'greece',
+    name: {
+      ET: 'Kreeka',
+      RU: 'Греция',
+      EN: 'Greece',
+    },
+    subtitle: {
+      ET: 'Valged Küklaadide saared, Joonia meri ja varjatud lahesopid',
+      RU: 'Киклады, бирюза Ионического моря и скрытые бухты',
+      EN: 'Sun-washed Cyclades, Ionian bays, and quiet Aegean coves',
+    },
+    region: {
+      ET: 'Vahemeri',
+      RU: 'Средиземноморье',
+      EN: 'Mediterranean',
+    },
+    description: {
+      ET: 'Kreekas saab ühendada saarepuhkuse ja ajaloolised paigad. Aitame valida saared, marsruudi ja hooaja Sinu tempo järgi.',
+      RU: 'В Греции можно совместить отдых на островах и знакомство с историей. Поможем выбрать острова, маршрут и сезон в подходящем вам темпе.',
+      EN: 'Greece combines island holidays with history. We help you choose the islands, route and season at a pace that suits you.',
+    },
+    highlights: {
+      ET: [
+        'Küklaadid ja Dodekaneesid',
+        'Joonia ja Egeuse mere rannikud',
+        'Reis saarelt saarele',
+      ],
+      RU: [
+        'Киклады и Додеканес',
+        'Побережья Ионического и Эгейского морей',
+        'Путешествие с острова на остров',
+      ],
+      EN: [
+        'The Cyclades and the Dodecanese',
+        'Ionian and Aegean coasts',
+        'Island-hopping',
       ],
     },
     bestSeason: {
@@ -46,12 +203,64 @@ export const destinations: Destination[] = [
       EN: 'May – June & September – October',
     },
     travelStyle: {
-      ET: 'Kultuur, maastikud ja esteetiline gastronoomia',
-      RU: 'Культура, пейзажи и высокая гастрономия',
-      EN: 'Culture, landscapes and leisurely gastronomy',
+      ET: 'Saareelu, valgus, meri ja aeglane rütm',
+      RU: 'Островная жизнь, свет, море и размеренный ритм',
+      EN: 'Island aesthetics, Aegean light, and slow living',
     },
-    // High-resolution curated Amalfi coastal view
-    imageUrl: 'https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1600&q=85',
+    // Serene whitewashed Greek island architecture
+    imageUrl: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1400&q=85',
+    aspect: 'tall',
+  },
+  {
+    id: 'montenegro',
+    name: {
+      ET: 'Montenegro',
+      RU: 'Черногория',
+      EN: 'Montenegro',
+    },
+    subtitle: {
+      ET: 'Kotori laht, Aadria mere rannik ja mäed',
+      RU: 'Бока-Которская бухта, побережье Адриатики и горы',
+      EN: 'The Bay of Kotor, the Adriatic coast and mountains',
+    },
+    region: {
+      ET: 'Aadria meri',
+      RU: 'Адриатика',
+      EN: 'Adriatic Sea',
+    },
+    description: {
+      ET: 'Montenegro ühendab Aadria mere rannad, vanalinnad ja mäed. Aitame valida kuurordi, majutuse ja marsruudi vastavalt Sinu soovidele ja eelarvele.',
+      RU: 'Черногория сочетает пляжи Адриатики, старые города и горы. Поможем выбрать курорт, проживание и маршрут под ваши пожелания и бюджет.',
+      EN: 'Montenegro combines Adriatic beaches, old towns and mountains. We help you choose the resort, accommodation and route to fit your wishes and budget.',
+    },
+    highlights: {
+      ET: [
+        'Kotori laht ja Kotori vanalinn',
+        'Budva ja Aadria mere rannad',
+        'Mäed ja rahvuspargid',
+      ],
+      RU: [
+        'Бока-Которская бухта и старый город Котор',
+        'Будва и пляжи Адриатики',
+        'Горы и национальные парки',
+      ],
+      EN: [
+        'The Bay of Kotor and Kotor Old Town',
+        'Budva and the Adriatic beaches',
+        'Mountains and national parks',
+      ],
+    },
+    bestSeason: {
+      ET: 'Mai – Oktoober',
+      RU: 'Май – Октябрь',
+      EN: 'May – October',
+    },
+    travelStyle: {
+      ET: 'Rannapuhkus ja looduslikud maastikud',
+      RU: 'Пляжный отдых и природные пейзажи',
+      EN: 'Beach holidays and scenic landscapes',
+    },
+    imageUrl: 'https://images.unsplash.com/photo-1614122027743-50a9e6e8002f?auto=format&fit=crop&w=1600&q=85',
     aspect: 'wide',
   },
   {
@@ -72,25 +281,25 @@ export const destinations: Destination[] = [
       EN: 'Indian Ocean',
     },
     description: {
-      ET: 'Valime just Sulle sobiva saare: olgu sooviks täielik eraldatus UNESCO biosfäärikaitsealal, tipptasemel spaa või erakordne riffide elurikkus vahetult villa trepi all.',
-      RU: 'Мы подбираем именно тот курорт, который соответствует вашей мечте: от полного уединения в биосферном заповеднике ЮНЕСКО до гастрономических резиденций и богатейших коралловых рифов.',
-      EN: 'We carefully match you with an island tailored to your desire: whether absolute barefoot solitude within a UNESCO biosphere reserve, transformative wellness, or teeming marine house reefs.',
+      ET: 'Maldiividel on palju kuurortsaari ja need on üksteisest väga erinevad. Aitame valida saare, majutuse ja transfeeri viisi vastavalt Sinu soovidele ja eelarvele.',
+      RU: 'На Мальдивах множество курортных островов, и они заметно отличаются. Поможем выбрать остров, проживание и вид трансфера под ваши пожелания и бюджет.',
+      EN: 'The Maldives has many resort islands and they differ a lot. We help you choose the island, accommodation and transfer type to fit your wishes and budget.',
     },
     highlights: {
       ET: [
-        'Hoolikalt valitud butiiksaared ilma massiturismita',
-        'Vesilennuki transfeerid ja privaatne vastuvõtt Malés',
-        'Päikeseloojangu sukeldumine ja delfiinivaatlused',
+        'Atollid ja kuurortsaared',
+        'Veevillad ja korallrifid',
+        'Transfeer vesilennuki või kiirlaevaga (sõltub kuurordist)',
       ],
       RU: [
-        'Тщательно отобранные острова без массового потока',
-        'Трансфер на гидросамолете и VIP-встреча в Мале',
-        'Дайвинг на закате и наблюдение за мантами',
+        'Атоллы и курортные острова',
+        'Водные виллы и коралловые рифы',
+        'Трансфер на гидросамолёте или катере (зависит от курорта)',
       ],
       EN: [
-        'Curated boutique islands free from mass-market crowds',
-        'Scenic seaplane flights and seamless CIP arrival in Malé',
-        'Sunset marine excursions and manta ray encounters',
+        'Atolls and resort islands',
+        'Overwater villas and coral reefs',
+        'Seaplane or speedboat transfers (depends on the resort)',
       ],
     },
     bestSeason: {
@@ -105,59 +314,6 @@ export const destinations: Destination[] = [
     },
     // Pristine turquoise lagoon overwater villa
     imageUrl: 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1400&q=85',
-    aspect: 'tall',
-  },
-  {
-    id: 'greece',
-    name: {
-      ET: 'Kreeka',
-      RU: 'Греция',
-      EN: 'Greece',
-    },
-    subtitle: {
-      ET: 'Valged Küklaadide saared, Joonia meri ja varjatud lahesopid',
-      RU: 'Киклады, бирюза Ионического моря и скрытые бухты',
-      EN: 'Sun-washed Cyclades, Ionian bays, and quiet Aegean coves',
-    },
-    region: {
-      ET: 'Vahemeri',
-      RU: 'Средиземноморье',
-      EN: 'Mediterranean',
-    },
-    description: {
-      ET: 'Kreeka olemus avaneb eemal tavapärastest rahvamassidest: vaoshoitud kiviarhitektuur Milosel või Tinosel, privaatsed purjeretked ning aeglased lõunasöögid oliivipuude varjus.',
-      RU: 'Истинный характер Греции раскрывается вдали от толп: лаконичная белая архитектура Милоса и Тиноса, частные морские переходы и неспешные обеды в тени вековых олив.',
-      EN: 'The true soul of Greece reveals itself beyond predictable routes: sculptural Cycladic architecture on quiet islands, private sailing among uninhabited islets, and long seaside lunches beneath old olive groves.',
-    },
-    highlights: {
-      ET: [
-        'Vaiksemad Küklaadide ja Dodekaneeside pärlid',
-        'Disainhotellid, mis sulanduvad maastikku',
-        'Kohalikud kalurikülad ja puutumata rannad',
-      ],
-      RU: [
-        'Камерные острова Киклад и Додеканеса',
-        'Дизайн-отели, растворенные в прибрежном ландшафте',
-        'Аутентичные рыбацкие таверны и уединенные бухты',
-      ],
-      EN: [
-        'Atmospheric Cycladic hideaways beyond tourist corridors',
-        'Design sanctuaries sculpted into the rugged landscape',
-        'Private rib-boat excursions to secluded coastal inlets',
-      ],
-    },
-    bestSeason: {
-      ET: 'Mai – Juuni & September – Oktoober',
-      RU: 'Май – Июнь и Сентябрь – Октябрь',
-      EN: 'May – June & September – October',
-    },
-    travelStyle: {
-      ET: 'Saareelu, valgus, meri ja aeglane rütm',
-      RU: 'Островная жизнь, свет, море и размеренный ритм',
-      EN: 'Island aesthetics, Aegean light, and slow living',
-    },
-    // Serene whitewashed Greek island architecture
-    imageUrl: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1400&q=85',
     aspect: 'tall',
   },
   {
@@ -178,25 +334,25 @@ export const destinations: Destination[] = [
       EN: 'Southeast Asia',
     },
     description: {
-      ET: 'Mõtestatud teekonnad põhjapoolsetest mägirahvaste traditsioonidest ja templiarhitektuurist kuni Lõuna-Tai eraldatud saarteni, kus aeg liigub omasoodu.',
-      RU: 'Вдумчивые путешествия от северных чайных террас Чиангмая и древних святилищ до скрытых островов Андаманского моря с безупречным сервисом.',
-      EN: 'Contemplative journeys from the misty tea hills and temple heritage of the North to secluded Andaman bays framed by limestone karsts and private beachfront pavilions.',
+      ET: 'Tais saab ühendada rannapuhkuse, saared ja kultuuri. Aitame valida piirkonna ja hooaja: Põhja-Tai, Phuket, Krabi või Samui.',
+      RU: 'В Таиланде можно совместить пляжный отдых, острова и культуру. Поможем выбрать регион и сезон: север страны, Пхукет, Краби или Самуи.',
+      EN: 'Thailand lets you combine beach holidays, islands and culture. We help you choose the region and season: the north, Phuket, Krabi or Samui.',
     },
     highlights: {
       ET: [
-        'Eraldatud butiikvillad Phang Nga ja Samui lahtedes',
-        'Eraviisilised templivisiidid munkade õnnistusega',
-        'Kureeritud heaoluteekonnad ja spaa-rituaalid',
+        'Phuketi, Krabi ja Samui saared',
+        'Põhja-Tai templid ja mäestik',
+        'Rannapuhkus koos kultuuriprogrammiga',
       ],
       RU: [
-        'Приватные виллы в заливе Пхангнга и на Самуи',
-        'Индивидуальные визиты в храмы с местными проводниками',
-        'Велнес-программы и древние спа-ритуалы',
+        'Острова Пхукет, Краби и Самуи',
+        'Храмы и горы севера Таиланда',
+        'Пляжный отдых с культурной программой',
       ],
       EN: [
-        'Tucked-away villas overlooking dramatic karst formations',
-        'Private temple access and respectful cultural encounters',
-        'Restorative traditional wellness and healing culinary arts',
+        'Phuket, Krabi and Samui islands',
+        'Temples and hills of northern Thailand',
+        'Beach holidays combined with culture',
       ],
     },
     bestSeason: {
@@ -212,59 +368,6 @@ export const destinations: Destination[] = [
     // Lush tropical coastal bay
     imageUrl: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1600&q=85',
     aspect: 'wide',
-  },
-  {
-    id: 'turkey',
-    name: {
-      ET: 'Türgi',
-      RU: 'Турция',
-      EN: 'Turkey',
-    },
-    subtitle: {
-      ET: 'Kapadookia koopakompleksid ja Egeuse ranniku salapaigad',
-      RU: 'Пещерные сьюты Каппадокии и тайные бухты Эгейского моря',
-      EN: 'Cappadocian stone retreats and private Aegean gulet waters',
-    },
-    region: {
-      ET: 'Väike-Aasia & Vahemeri',
-      RU: 'Малая Азия и Средиземноморье',
-      EN: 'Asia Minor & Aegean',
-    },
-    description: {
-      ET: 'Kaugele üle tüüpiliste kuurortide: päikesetõusu õhupallilennud vulkaaniliste kaljude kohal, ajaloolised kivisviidid ning privaatne puitgulet Egeuse türkiissinistel vetel.',
-      RU: 'Далеко за рамками стандартных курортов: рассветные полеты на воздушных шарах над причудливыми долинами, исторические сьюты в скалах и плавание на традиционной деревянной гулете.',
-      EN: 'Transcending conventional resort tourism: sunrise balloon ascents over volcanic fairy chimneys, restored Byzantine cave residences, and private wooden gulet charters along the turquoise Aegean coast.',
-    },
-    highlights: {
-      ET: [
-        'Luksuslikud koobashotellid Uçhisari kõrgendikul',
-        'Privaatne puust gulett-purjetamine Bodrumi rannikul',
-        'Istanbuli ajaloolised paleed ja kureeritud kunstikogud',
-      ],
-      RU: [
-        'Исторические отели в скалах с панорамными террасами',
-        'Индивидуальный круиз на деревянной гулете из Бодрума',
-        'Османские дворцы и галереи современного Стамбула',
-      ],
-      EN: [
-        'Architectural cave suites with uninterrupted valley horizons',
-        'Private chartered wooden gulet sailing secluded bays',
-        'Private Bosphorus passages and curated Istanbul heritage',
-      ],
-    },
-    bestSeason: {
-      ET: 'Aprill – Juuni & September – November',
-      RU: 'Апрель – Июнь и Сентябрь – Ноябрь',
-      EN: 'April – June & September – November',
-    },
-    travelStyle: {
-      ET: 'Ajalugu, maastikud ja rannikuline elustiil',
-      RU: 'История, пейзажи и прибрежный стиль жизни',
-      EN: 'Living history, surreal geography, and coastal ease',
-    },
-    // Hot air balloons over Cappadocia landscape
-    imageUrl: 'https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=1400&q=85',
-    aspect: 'square',
   },
   {
     id: 'srilanka',
@@ -284,25 +387,25 @@ export const destinations: Destination[] = [
       EN: 'South Asia',
     },
     description: {
-      ET: 'Aeglane reisimine selle parimal kujul: privaatne rongi- ja autoteekond läbi uduste teeistanduste, sajandivanused istanduse residentsid ning Galle ajalooline kindluslinn ookeani veerel.',
-      RU: 'Медленное путешествие в чистом виде: поездка на панорамном поезде сквозь чайные склоны, исторические резиденции плантаторов и колониальный форт Галле у океана.',
-      EN: 'Slow travel in its purest expression: scenic mountain train lines winding through emerald tea hills, restored colonial planters’ bungalows, and warm evenings within the ramparts of Galle Fort.',
+      ET: 'Sri Lankal saab ühendada rannapuhkuse, teemaastikud ja kultuuripärandi. Aitame valida marsruudi ja hooaja rannikule ja mägismaale.',
+      RU: 'На Шри-Ланке можно совместить пляжный отдых, чайные холмы и культурное наследие. Поможем выбрать маршрут и сезон для побережья и гор.',
+      EN: 'Sri Lanka lets you combine beaches, tea country and cultural heritage. We help you choose the route and season for the coast and the hills.',
     },
     highlights: {
       ET: [
-        'Ajaloolised Tea Trails bangalod mäestikus',
-        'Privaatne leopardisafari Yala vähemkülastatud aladel',
-        'Rannavillad Bentota ja Tangalle vaiksetes lahtedes',
+        'Teeistandused ja mägironglõik',
+        'Galle ajalooline kindlus',
+        'Lõuna- ja läänekalda rannad',
       ],
       RU: [
-        'Колониальные чайные резиденции в горах',
-        'Индивидуальное сафари на леопардов в парке Яла',
-        'Приватные пляжные виллы в бухтах Тангалле',
+        'Чайные плантации и горная железная дорога',
+        'Исторический форт Галле',
+        'Пляжи юга и запада острова',
       ],
       EN: [
-        'Restored highland tea planter bungalows with private butlers',
-        'Discreet leopard and wildlife tracking in Yala and Wilpattu',
-        'Oceanfront architectural villas on the southern shores',
+        'Tea country and the highland railway',
+        'The historic Galle Fort',
+        'Beaches on the south and west coast',
       ],
     },
     bestSeason: {
@@ -317,6 +420,59 @@ export const destinations: Destination[] = [
     },
     // Lush green Ceylon tea hills / train passage
     imageUrl: 'https://images.unsplash.com/photo-1546708973-b339540b5162?auto=format&fit=crop&w=1600&q=85',
+    aspect: 'wide',
+  },
+  {
+    id: 'italy',
+    name: {
+      ET: 'Itaalia',
+      RU: 'Италия',
+      EN: 'Italy',
+    },
+    subtitle: {
+      ET: 'Amalfi ranniku kaljud, Toscana künkad ja Dolomiitide vaikus',
+      RU: 'Амальфитанские утесы, холмы Тосканы и величие Доломитов',
+      EN: 'Amalfi cliffside hideaways, Tuscan estates and alpine serenity',
+    },
+    region: {
+      ET: 'Lõuna- ja Kesk-Euroopa',
+      RU: 'Южная и Центральная Европа',
+      EN: 'Southern & Central Europe',
+    },
+    description: {
+      ET: 'Itaalia sobib nii kultuuri- kui rannapuhkuseks: Amalfi rannik, Toscana, Como järv ja Dolomiidid. Aitame valida piirkonna, hooaja ja majutuse.',
+      RU: 'Италия подходит и для культурных поездок, и для отдыха у моря: Амальфитанское побережье, Тоскана, озеро Комо и Доломиты. Поможем выбрать регион, сезон и проживание.',
+      EN: 'Italy suits both cultural trips and seaside holidays: the Amalfi Coast, Tuscany, Lake Como and the Dolomites. We help you choose the region, season and accommodation.',
+    },
+    highlights: {
+      ET: [
+        'Amalfi rannik ja Capri saar',
+        'Toscana künkad ja Chianti veinipiirkond',
+        'Como järv ja Dolomiidid',
+      ],
+      RU: [
+        'Амальфитанское побережье и остров Капри',
+        'Холмы Тосканы и винный регион Кьянти',
+        'Озеро Комо и Доломиты',
+      ],
+      EN: [
+        'Amalfi Coast and the island of Capri',
+        'Tuscan hills and the Chianti wine region',
+        'Lake Como and the Dolomites',
+      ],
+    },
+    bestSeason: {
+      ET: 'Mai – Juuni & September – Oktoober',
+      RU: 'Май – Июнь и Сентябрь – Октябрь',
+      EN: 'May – June & September – October',
+    },
+    travelStyle: {
+      ET: 'Kultuur, maastikud ja esteetiline gastronoomia',
+      RU: 'Культура, пейзажи и высокая гастрономия',
+      EN: 'Culture, landscapes and leisurely gastronomy',
+    },
+    // High-resolution curated Amalfi coastal view
+    imageUrl: 'https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1600&q=85',
     aspect: 'wide',
   },
 ];
@@ -397,62 +553,5 @@ export const howItWorksSteps: HowItWorksStep[] = [
       EN: 'Should flight schedules shift or plans evolve, we manage the logistics swiftly and discreetly behind the scenes.',
     },
     imageUrl: 'https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1200&q=85',
-  },
-];
-
-export const travelerStories: TravelerStory[] = [
-  {
-    quote: {
-      ET: 'Esimest korda tundsime, et keegi ei ürita meile müüa valmistoodet, vaid mõtles päriselt kaasa, kuidas meie pere armastab puhata. Amalfi ranniku villa oli täpselt see, millest unistasime.',
-      RU: 'Впервые мы почувствовали, что нам не навязывают готовый тур, а искренне вникают в то, как именно любит отдыхать наша семья. Вилла на Амальфи была безупречной.',
-      EN: 'For the first time we felt that no one was trying to push a pre-packaged tour; they genuinely listened to how our family prefers to move and unwind. The cliffside retreat was unforgettable.',
-    },
-    author: 'Kristjan & Laura',
-    location: {
-      ET: 'Tallinn',
-      RU: 'Таллинн',
-      EN: 'Tallinn',
-    },
-    journey: {
-      ET: 'Itaalia · Amalfi rannik & Capri',
-      RU: 'Италия · Амальфи и Капри',
-      EN: 'Italy · Amalfi Coast & Capri',
-    },
-  },
-  {
-    quote: {
-      ET: 'Maldiivide saare valik osutus täielikuks kümnesse tabamuseks. Saare rahu, toidu tase ja mereelustik ületasid kõik ootused. Terve teekond oli viimse detailini läbi mõeldud.',
-      RU: 'Выбор курорта на Мальдивах оказался стопроцентным попаданием. Уединение, гастрономия и подводный мир превзошли все ожидания. Все было организовано до мелочей.',
-      EN: 'The island recommendation in the Maldives was spot-on. The calm atmosphere, dining quality, and reef life far exceeded our hopes. Everything was choreographed down to the finest detail.',
-    },
-    author: 'Elena & Andrei',
-    location: {
-      ET: 'Tallinn',
-      RU: 'Таллинн',
-      EN: 'Tallinn',
-    },
-    journey: {
-      ET: 'Maldiivid · Baa atoll',
-      RU: 'Мальдивы · Атолл Баа',
-      EN: 'Maldives · Baa Atoll',
-    },
-  },
-  {
-    quote: {
-      ET: 'Sri Lanka mägismaa rongisõit ja eraldatud teeistanduse bangalo jäävad meelde terveks eluks. Travel Atelier tegi kogu korralduse täiesti muretuks.',
-      RU: 'Поездка на поезде по чайным холмам Шри-Ланки и колониальное бунгало останутся в памяти навсегда. Travel Atelier избавил нас от любых забот.',
-      EN: 'The scenic mountain train through Sri Lanka’s highlands and our stay in a historic tea bungalow will stay with us for life. Travel Atelier made the entire journey effortless.',
-    },
-    author: 'Mait',
-    location: {
-      ET: 'Tartu',
-      RU: 'Тарту',
-      EN: 'Tartu',
-    },
-    journey: {
-      ET: 'Sri Lanka · Kesk-kõrgustik & Galle',
-      RU: 'Шри-Ланка · Чайные холмы и Галле',
-      EN: 'Sri Lanka · Ceylon Highlands & Galle',
-    },
   },
 ];

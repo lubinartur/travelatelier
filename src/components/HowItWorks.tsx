@@ -134,7 +134,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({
                           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
                           <div className="absolute bottom-3 left-3 text-white text-xs font-light">
                             <span className="font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-xs border border-white/20">
-                              {step.step} · Atelier Protocol
+                              {step.step}
                             </span>
                           </div>
                         </div>
@@ -176,7 +176,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({
               {/* Bottom active step pill */}
               <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-white text-xs font-light pointer-events-none">
                 <span className="font-mono uppercase tracking-widest text-[11px] px-3 py-1 rounded-full bg-black/60 backdrop-blur-xs border border-white/20">
-                  {howItWorksSteps[activeStepIndex].step} · Atelier Protocol
+                  {howItWorksSteps[activeStepIndex].step}
                 </span>
                 <span className="font-serif italic text-sm text-white px-3 py-1 rounded-full bg-black/60 backdrop-blur-xs border border-white/20">
                   {getTranslation(howItWorksSteps[activeStepIndex].title, currentLang)}

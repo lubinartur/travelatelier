@@ -51,10 +51,9 @@ export const BrandStatement: React.FC<BrandStatementProps> = ({ currentLang }) =
           <div className="lg:col-span-4 mt-4 lg:mt-8">
             <EditorialImageMask
               src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=85"
-              alt="Italian coastal stone architecture"
+              alt={getTranslation(translations.brandStatement.imageAlt, currentLang)}
               aspectRatio="aspect-3/4"
-              caption="Vernazza, Liguria"
-              className="shadow-[0_16px_40px_-10px_rgba(0,0,0,0.08)]"
+              caption={getTranslation(translations.brandStatement.imageCaption, currentLang)}
               parallax
             />
           </div>

@@ -71,6 +71,3 @@ export const unsplashFallbackSrc = (
   url.searchParams.set('q', String(parseQuality(source)));
   return url.toString();
 };
-
-export const FIRST_HERO_IMAGE =
-  'https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=2200&q=90';

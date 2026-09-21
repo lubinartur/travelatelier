@@ -92,6 +92,11 @@ export const Footer: React.FC<FooterProps> = ({
                 </AppLink>
               </li>
               <li>
+                <AppLink href={`${sectionPrefix}#esto`} onNavigate={onNavigate} className="hover:text-white transition-colors">
+                  {getTranslation(translations.nav.esto, currentLang)}
+                </AppLink>
+              </li>
+              <li>
                 <button
                   onClick={onOpenTripModal}
                   className="hover:text-[#E09074] transition-colors text-left cursor-pointer"

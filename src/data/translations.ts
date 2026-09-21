@@ -1,6 +1,13 @@
 import { Language } from '../types';
 
 export const translations = {
+  meta: {
+    description: {
+      ET: 'Travel Atelier OÜ aitab valida reisi soovide ja eelarve järgi: sihtkohad, reisikindlustus ja osamaksed ESTO kaudu.',
+      RU: 'Travel Atelier OÜ помогает подобрать поездку под ваши пожелания и бюджет: направления, туристическая страховка и оплата частями через ESTO.',
+      EN: 'Travel Atelier OÜ helps you choose a trip around your wishes and budget: destinations, travel insurance and instalments through ESTO.',
+    },
+  },
   nav: {
     destinations: {
       ET: 'Sihtkohad',
@@ -27,10 +34,20 @@ export const translations = {
       RU: 'Страхование',
       EN: 'Travel insurance',
     },
+    esto: {
+      ET: 'ESTO osamaksed',
+      RU: 'Оплата частями ESTO',
+      EN: 'Pay with ESTO',
+    },
     contact: {
       ET: 'Kontakt',
       RU: 'Контакты',
       EN: 'Contact',
+    },
+    menuToggle: {
+      ET: 'Ava või sulge menüü',
+      RU: 'Открыть или закрыть меню',
+      EN: 'Open or close the menu',
     },
     planTrip: {
       ET: 'Planeeri reis',
@@ -39,6 +56,26 @@ export const translations = {
     },
   },
   hero: {
+    sliderLabel: {
+      ET: 'Avalehe fotode slaidiseansi juhtnupud',
+      RU: 'Управление слайд-шоу на главной',
+      EN: 'Homepage slideshow controls',
+    },
+    slideLabel: {
+      ET: 'Slaid {n}: {title}',
+      RU: 'Слайд {n}: {title}',
+      EN: 'Slide {n}: {title}',
+    },
+    slideActive: {
+      ET: '(praegune)',
+      RU: '(текущий)',
+      EN: '(current)',
+    },
+    paused: {
+      ET: 'paus',
+      RU: 'пауза',
+      EN: 'paused',
+    },
     subtitle: {
       ET: 'Individuaalreisid',
       RU: 'Индивидуальные путешествия',
@@ -71,6 +108,16 @@ export const translations = {
     },
   },
   brandStatement: {
+    imageAlt: {
+      ET: 'Liguuria rannikuküla värviliste majadega merekaljul',
+      RU: 'Прибрежная деревня Лигурии с цветными домами на скале у моря',
+      EN: 'Ligurian coastal village with colourful houses on a cliff by the sea',
+    },
+    imageCaption: {
+      ET: 'Manarola, Liguuria',
+      RU: 'Манарола, Лигурия',
+      EN: 'Manarola, Liguria',
+    },
     eyebrow: {
       ET: 'Meie filosoofia',
       RU: 'Наша философия',
@@ -109,9 +156,9 @@ export const translations = {
       EN: 'Places where you linger a little longer.',
     },
     subtitle: {
-      ET: 'Valik sihtkohti, kus oleme loonud kümneid rätsepatööna valminud reise.',
-      RU: 'Коллекция направлений, для которых мы разработали десятки эксклюзивных маршрутов.',
-      EN: 'A focused selection of destinations where we continually craft bespoke, thoughtful itineraries.',
+      ET: 'Valik sihtkohti, kuhu aitame teil reisi koostada.',
+      RU: 'Подборка направлений, по которым мы поможем составить поездку.',
+      EN: 'A selection of destinations we can help you plan a trip to.',
     },
     viewAll: {
       ET: 'Kõik sihtkohad',
@@ -237,7 +284,7 @@ export const translations = {
   practical: {
     tagline: {
       ET: 'Praktilised teenused',
-      RU: 'Практические сервисы',
+      RU: 'Практические услуги',
       EN: 'Practical services',
     },
     title: {
@@ -282,9 +329,9 @@ export const translations = {
       EN: 'Where should we take you next?',
     },
     description: {
-      ET: 'Räägi meile oma unistuste puhkusest. Leiame parimad lennud, erilised peatuspaigad ja koostame Sinu jaoks tervikliku teekonna.',
-      RU: 'Расскажите нам о вашем желанном отдыхе. Мы подберем лучшие рейсы, атмосферные отели и создадим идеальный маршрут.',
-      EN: 'Tell us about the journey you envision. We will curate the finest stays, seamless routes, and an unhurried itinerary tailored just for you.',
+      ET: 'Räägi meile, millist reisi soovid. Aitame valida sobivad lennud ja peatuspaigad ning koostame teekonna Sinu soovide järgi.',
+      RU: 'Расскажите, какую поездку вы хотите. Мы поможем подобрать рейсы и проживание и составим маршрут под ваши пожелания.',
+      EN: 'Tell us about the journey you have in mind. We will help you choose flights and stays and shape an itinerary around your wishes.',
     },
     button: {
       ET: 'Alusta reisi planeerimist',
@@ -341,9 +388,9 @@ export const translations = {
       EN: 'Share your initial ideas — we will help shape a personal itinerary.',
     },
     unavailableNotice: {
-      ET: 'Veebipõhine reisisoov ei ole praegu avatud. Vormi andmeid kuhugi ei saadeta.',
-      RU: 'Онлайн-заявка пока недоступна. Данные из формы никуда не отправляются.',
-      EN: 'Online enquiry is not available yet. Nothing entered in this form is sent.',
+      ET: 'Nupp avab teie e-posti programmis valmis kirja aadressile info@travelatelier.ee. Päring jõuab meieni alles siis, kui kirja ise ära saadate.',
+      RU: 'Кнопка откроет в вашей почтовой программе готовое письмо на info@travelatelier.ee. Запрос дойдёт до нас только после того, как вы сами отправите письмо.',
+      EN: 'The button opens a ready-made email to info@travelatelier.ee in your email app. We receive the enquiry only once you send that email yourself.',
     },
     destinationLabel: {
       ET: 'Soovitud sihtkoht või piirkond',
@@ -367,20 +414,80 @@ export const translations = {
       { id: 'family', ET: 'Mugav perereis', RU: 'Семейный отдых', EN: 'Family Journey' },
       { id: 'active', ET: 'Loodus ja seiklus', RU: 'Природа и приключения', EN: 'Nature & Adventure' },
     ],
-    timingLabel: {
-      ET: 'Eelistatud aeg või kuu',
-      RU: 'Предпочтительное время или месяц',
-      EN: 'Preferred timing or season',
+    adultsLabel: {
+      ET: 'Täiskasvanute arv',
+      RU: 'Количество взрослых',
+      EN: 'Number of adults',
     },
-    timingPlaceholder: {
-      ET: 'Nt. Mai 2026, ca 10–12 päeva',
-      RU: 'Напр. Май 2026, 10–12 дней',
-      EN: 'E.g. Autumn 2026, approx. 10 days',
+    childrenLabel: {
+      ET: 'Laste arv',
+      RU: 'Количество детей',
+      EN: 'Number of children',
     },
-    travelersLabel: {
-      ET: 'Reisijate arv',
-      RU: 'Количество путешественников',
-      EN: 'Number of travelers',
+    childAgesLegend: {
+      ET: 'Iga lapse vanus reisi ajal',
+      RU: 'Возраст каждого ребёнка на момент поездки',
+      EN: 'Age of each child at the time of travel',
+    },
+    childAgeLabel: {
+      ET: '{n}. lapse vanus',
+      RU: 'Возраст ребёнка {n}',
+      EN: 'Child {n} age',
+    },
+    childAgeUnderOne: {
+      ET: 'alla 1 aasta',
+      RU: 'до 1 года',
+      EN: 'under 1',
+    },
+    datesLabel: {
+      ET: 'Soovitud reisi kuupäevad',
+      RU: 'Желаемые даты поездки',
+      EN: 'Desired travel dates',
+    },
+    datesPlaceholder: {
+      ET: 'Nt. 15.–20. juuni',
+      RU: 'Напр. 15–20 июня',
+      EN: 'E.g. 15–20 June',
+    },
+    durationLabel: {
+      ET: 'Reisi kestus',
+      RU: 'Продолжительность поездки',
+      EN: 'Trip length',
+    },
+    durationPlaceholder: {
+      ET: 'Nt. 7',
+      RU: 'Напр. 7',
+      EN: 'E.g. 7',
+    },
+    durationUnitLabel: {
+      ET: 'Kestuse ühik',
+      RU: 'Единица продолжительности',
+      EN: 'Length unit',
+    },
+    durationNights: {
+      ET: 'ööd',
+      RU: 'ночей',
+      EN: 'nights',
+    },
+    durationDays: {
+      ET: 'päeva',
+      RU: 'дней',
+      EN: 'days',
+    },
+    mailSubject: {
+      ET: 'Reisipäring: {destination}',
+      RU: 'Запрос на поездку: {destination}',
+      EN: 'Trip enquiry: {destination}',
+    },
+    mailOpenDestination: {
+      ET: 'sihtkoht selgub',
+      RU: 'направление обсуждается',
+      EN: 'destination open',
+    },
+    requiredNote: {
+      ET: 'Tärniga (*) väljad on kohustuslikud.',
+      RU: 'Поля со звёздочкой (*) обязательны.',
+      EN: 'Fields marked with (*) are required.',
     },
     nameLabel: {
       ET: 'Sinu nimi',
@@ -408,9 +515,9 @@ export const translations = {
       EN: 'Tell us what makes a journey truly meaningful to you...',
     },
     submit: {
-      ET: 'Saada reisisoov',
-      RU: 'Отправить запрос',
-      EN: 'Submit Journey Request',
+      ET: 'Koosta e-kiri',
+      RU: 'Подготовить письмо',
+      EN: 'Prepare email',
     },
     close: {
       ET: 'Sulge',
@@ -515,9 +622,9 @@ export const translations = {
       EN: 'What data do we collect?',
     },
     privacyDataBody: {
-      ET: 'Veebileht ei võta praegu vastu ega edasta veebipõhist reisisoovi. Reisiplaneerija vorm jätab sisestatud väljad ainult teie brauserisse, kuni dialoogi sulgete; andmeid Travel Atelierile ega ühelegi serverile ei saadeta. Kui kirjutate e-kirja või helistate, jõuavad meieni need andmed, mille te nendes kanalites ise edastate (tavaliselt nimi, kontakt ja sõnumi sisu). Makseandmeid see veebileht ei kogu. Analüütika- ega reklaamiskripte lehel ei ole.',
-      RU: 'Сайт сейчас не принимает и не доставляет онлайн-заявку. Форма планировщика поездки хранит введённые поля только в вашем браузере, пока диалог открыт; данные не отправляются в Travel Atelier и ни на какой сервер. Если вы пишете на почту или звоните, мы получаем то, что вы сами передаёте этими каналами (обычно имя, контакт и текст сообщения). Платёжные данные сайт не собирает. Скриптов аналитики и рекламы на странице нет.',
-      EN: 'The website currently does not accept or deliver an online travel enquiry. The trip planner form keeps typed fields only in your browser until you close the dialog; nothing is sent to Travel Atelier or to any server. If you email or call, we receive what you send through those channels (typically your name, contact details, and message). This website does not collect payment data. There are no analytics or advertising scripts on the page.',
+      ET: 'Veebileht ei saada vormi andmeid ühelegi serverile. Reisiplaneerija vormi nupp koostab teie e-posti programmis kirja aadressile info@travelatelier.ee; kiri jõuab meieni alles siis, kui te selle ise ära saadate, ja siis kehtivad teie e-posti teenusepakkuja tingimused. Kui kirjutate e-kirja või helistate, jõuavad meieni need andmed, mille te nendes kanalites ise edastate (tavaliselt nimi, kontakt, reisi soovid ja sõnumi sisu). Makseandmeid see veebileht ei kogu. Analüütika- ega reklaamiskripte lehel ei ole.',
+      RU: 'Сайт не отправляет данные формы ни на какой сервер. Кнопка формы планировщика поездки создаёт в вашей почтовой программе письмо на info@travelatelier.ee; оно попадёт к нам только после того, как вы сами его отправите, и тогда действуют условия вашего почтового провайдера. Если вы пишете на почту или звоните, мы получаем то, что вы сами передаёте этими каналами (обычно имя, контакт, пожелания по поездке и текст сообщения). Платёжные данные сайт не собирает. Скриптов аналитики и рекламы на странице нет.',
+      EN: 'The website does not send form data to any server. The trip planner button creates an email to info@travelatelier.ee in your email app; it reaches us only once you send it yourself, and your email provider’s terms then apply. If you email or call, we receive what you send through those channels (typically your name, contact details, travel wishes and message). This website does not collect payment data. There are no analytics or advertising scripts on the page.',
     },
     privacyThirdParties: {
       ET: 'Lehe avamisel võivad kirjatüüpide ja piltide teenused (Google Fonts ja Unsplash) saada tehnilisi andmeid, näiteks IP-aadressi ja brauseri tunnusandmed. Nende töötlemist me ei juhi. Veebilehe majutaja andmetöötlust ei ole siin nimetatud, sest majutusteenus ei ole selles koodis kinnitatud.',
@@ -540,9 +647,9 @@ export const translations = {
       EN: 'Data retention',
     },
     privacyRetentionBody: {
-      ET: 'Säilitustähtaega siin ei määrata. Veebileht ei salvesta vormisaadetisi. Telefoni või e-posti teel saabunud kirjavahetust käsitletakse teile vastamiseks; säilitamise tähtaega sellel lehel ei ole avaldatud.',
-      RU: 'Срок хранения здесь не устанавливается. Сайт не сохраняет отправки формы. Переписка по телефону или электронной почте обрабатывается, чтобы ответить вам; срок хранения на этой странице не опубликован.',
-      EN: 'No retention period is stated here. The website does not store form submissions. Correspondence received by phone or email is handled in order to reply to you; no retention schedule is published on this page.',
+      ET: 'Säilitustähtaega siin ei määrata. Veebileht ei salvesta vormi andmeid. E-posti ja telefoni teel saabunud kirjavahetust käsitletakse teile vastamiseks; säilitamise tähtaega sellel lehel ei ole avaldatud.',
+      RU: 'Срок хранения здесь не устанавливается. Сайт не сохраняет данные формы. Переписка по телефону или электронной почте обрабатывается, чтобы ответить вам; срок хранения на этой странице не опубликован.',
+      EN: 'No retention period is stated here. The website does not store form data. Correspondence received by phone or email is handled in order to reply to you; no retention schedule is published on this page.',
     },
     privacyRightsHeading: {
       ET: 'Teie õigused',

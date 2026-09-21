@@ -141,7 +141,9 @@ export const Header: React.FC<HeaderProps> = ({
               className={`p-1.5 rounded-full focus:outline-none transition-colors ${
                 solidHeader ? 'text-[#181816]' : 'text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]'
               }`}
-              aria-label="Toggle navigation menu"
+              aria-label={getTranslation(translations.nav.menuToggle, currentLang)}
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-drawer"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>

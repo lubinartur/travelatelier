@@ -60,22 +60,3 @@ export interface HowItWorksStep {
   };
   imageUrl: string;
 }
-
-export interface TravelerStory {
-  quote: {
-    ET: string;
-    RU: string;
-    EN: string;
-  };
-  author: string;
-  location: {
-    ET: string;
-    RU: string;
-    EN: string;
-  };
-  journey: {
-    ET: string;
-    RU: string;
-    EN: string;
-  };
-}

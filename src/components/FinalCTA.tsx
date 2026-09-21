@@ -37,7 +37,7 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ currentLang, onOpenTripModal
         {/* Content with soft viewport reveal */}
         <RevealOnScroll distance={16} threshold={0.2}>
           <div className="relative z-10 px-8 py-20 sm:p-16 lg:p-24 text-center max-w-4xl mx-auto flex flex-col items-center">
-            <span className="text-xs uppercase tracking-wider text-[#E09074] font-medium mb-6">
+            <span className="text-xs uppercase tracking-wider text-white font-medium mb-6 drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]">
               Travel Atelier
             </span>
 

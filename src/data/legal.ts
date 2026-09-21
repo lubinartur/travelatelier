@@ -108,6 +108,28 @@ export const operatorReferences: OperatorReference[] = [
       },
     ],
   },
+  {
+    id: 'premio',
+    name: 'Premio Travel',
+    links: [
+      {
+        href: 'https://www.premiotravel.ee/userfiles/files/Pakettreisilepingu%20u%CC%88ldtingimused_al%2026_01_2026.pdf',
+        label: {
+          ET: 'Premio Travel pakettreisilepingu üldtingimused (al. 26.01.2026)',
+          RU: 'Общие условия договора Premio Travel для пакетных туров (с 26.01.2026)',
+          EN: 'Premio Travel package travel contract terms (from 26 January 2026)',
+        },
+      },
+      {
+        href: 'https://www.premiotravel.ee/pakettreisilepingu-standardinfo-teabeleht',
+        label: {
+          ET: 'Premio Travel pakettreisilepingu standardinfo teabeleht',
+          RU: 'Стандартный информационный лист Premio Travel для пакетных туров',
+          EN: 'Premio Travel standard information sheet for package travel',
+        },
+      },
+    ],
+  },
 ];
 
 export const officialResources: OfficialResource[] = [

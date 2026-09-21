@@ -402,7 +402,7 @@ export const Hero: React.FC<HeroProps> = ({
         <div
           className="absolute bottom-6 sm:bottom-8 left-6 sm:left-8 flex items-center space-x-3 bg-black/65 backdrop-blur-md px-4 py-2.5 rounded-full border border-white/20 z-20 shadow-lg select-none"
           role="region"
-          aria-label="Hero slideshow navigation"
+          aria-label={getTranslation(translations.hero.sliderLabel, currentLang)}
         >
           {/* Progress Segments */}
           <div className="flex items-center space-x-1.5 sm:space-x-2">
@@ -414,7 +414,11 @@ export const Hero: React.FC<HeroProps> = ({
                   type="button"
                   onClick={() => handleManualSelect(idx)}
                   className="group relative py-1 cursor-pointer focus:outline-none focus-visible:ring-1 focus-visible:ring-white rounded-full"
-                  aria-label={`Slide ${idx + 1}: ${getTranslation(vista.title, currentLang)}${isActive ? ' (active)' : ''}`}
+                  aria-label={`${getTranslation(translations.hero.slideLabel, currentLang)
+                    .replace('{n}', String(idx + 1))
+                    .replace('{title}', getTranslation(vista.title, currentLang))}${
+                    isActive ? ` ${getTranslation(translations.hero.slideActive, currentLang)}` : ''
+                  }`}
                   aria-current={isActive ? 'true' : 'false'}
                   title={getTranslation(vista.title, currentLang)}
                 >

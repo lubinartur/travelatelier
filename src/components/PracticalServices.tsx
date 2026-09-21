@@ -47,33 +47,9 @@ export const PracticalServices: React.FC<PracticalServicesProps> = ({
 
         {/* Editorial Two-Column Service Composition - equal structure and footer height */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 divide-y lg:divide-y-0 lg:divide-x divide-[#DDD5C7] items-stretch">
-          {/* Column 1: Travel insurance */}
+          {/* Column 1: ESTO instalments — keep on the page; do not remove without owner approval */}
           <RevealOnScroll className="h-full" distance={16} threshold={0.15}>
-            <div className={`${columnBodyClassName} pt-0 lg:pr-12`}>
-              <div className="flex-1">
-                <h3 className="font-serif text-2xl sm:text-3xl font-medium text-[#181816] mb-4">
-                  {getTranslation(translations.practical.insurance.title, currentLang)}
-                </h3>
-
-                <p className="text-sm sm:text-base text-[#54514B] font-light leading-relaxed mb-8">
-                  {getTranslation(translations.practical.insurance.desc, currentLang)}
-                </p>
-              </div>
-
-              <div className={columnFooterClassName}>
-                <div className={columnFooterRowClassName}>
-                  <a href={company.emailHref} className={inquireLinkClassName}>
-                    <span>{inquireLabel}</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </RevealOnScroll>
-
-          {/* Column 2: ESTO instalments */}
-          <RevealOnScroll className="h-full" distance={16} delay={0.15} threshold={0.15}>
-            <div className={`${columnBodyClassName} pt-12 lg:pt-0 lg:pl-16`}>
+            <div id="esto" className={`${columnBodyClassName} scroll-mt-24 pt-0 pb-12 lg:pb-0 lg:pr-12`}>
               <div className="flex-1">
                 <h3 className="font-serif text-2xl sm:text-3xl font-medium text-[#181816] mb-4">
                   {getTranslation(translations.practical.esto.title, currentLang)}
@@ -103,6 +79,31 @@ export const PracticalServices: React.FC<PracticalServicesProps> = ({
               </div>
             </div>
           </RevealOnScroll>
+
+          {/* Column 2: Travel insurance */}
+          <RevealOnScroll className="h-full" distance={16} delay={0.15} threshold={0.15}>
+            <div className={`${columnBodyClassName} pt-12 lg:pt-0 lg:pl-16`}>
+              <div className="flex-1">
+                <h3 className="font-serif text-2xl sm:text-3xl font-medium text-[#181816] mb-4">
+                  {getTranslation(translations.practical.insurance.title, currentLang)}
+                </h3>
+
+                <p className="text-sm sm:text-base text-[#54514B] font-light leading-relaxed mb-8">
+                  {getTranslation(translations.practical.insurance.desc, currentLang)}
+                </p>
+              </div>
+
+              <div className={columnFooterClassName}>
+                <div className={columnFooterRowClassName}>
+                  <a href={company.emailHref} className={inquireLinkClassName}>
+                    <span>{inquireLabel}</span>
+                    <ArrowUpRight className="w-3.5 h-3.5 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </RevealOnScroll>
+
         </div>
       </div>
     </section>

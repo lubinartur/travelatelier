@@ -92,7 +92,7 @@ export const DestinationModal: React.FC<DestinationModalProps> = ({
         <div className="p-6 sm:p-10 space-y-8">
           {/* Narrative */}
           <div>
-            <h3 className="text-xs uppercase tracking-wider text-[#7A7569] font-medium mb-3">
+            <h3 className="text-xs uppercase tracking-wider text-[#67635A] font-medium mb-3">
               {currentLang === 'ET' ? 'Teekonna iseloom' : currentLang === 'RU' ? 'Характер маршрута' : 'Itinerary Character'}
             </h3>
             <p className="text-[#54514B] text-base sm:text-lg font-light leading-relaxed">
@@ -102,13 +102,13 @@ export const DestinationModal: React.FC<DestinationModalProps> = ({
 
           {/* Highlights List */}
           <div>
-            <h3 className="text-xs uppercase tracking-wider text-[#7A7569] font-medium mb-4">
-              {currentLang === 'ET' ? 'Kureeritud elamused' : currentLang === 'RU' ? 'Избранные моменты' : 'Curated Highlights'}
+            <h3 className="text-xs uppercase tracking-wider text-[#67635A] font-medium mb-4">
+              {currentLang === 'ET' ? 'Peamised teemad' : currentLang === 'RU' ? 'Главное' : 'Highlights'}
             </h3>
             <div className="space-y-3">
               {(destination.highlights[currentLang] || destination.highlights.ET).map((item, idx) => (
                 <div key={idx} className="flex items-start space-x-3 text-sm text-[#484641] font-light">
-                  <CheckCircle2 className="w-4 h-4 text-[#B85A38] shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-[#A04E32] shrink-0 mt-0.5" />
                   <span>{item}</span>
                 </div>
               ))}
@@ -118,9 +118,9 @@ export const DestinationModal: React.FC<DestinationModalProps> = ({
           {/* Travel Style and Seasonality Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-5 rounded-2xl bg-[#F5F2EB] border border-[#DDD5C7]">
             <div className="flex items-start space-x-3">
-              <Calendar className="w-4 h-4 text-[#B85A38] shrink-0 mt-1" />
+              <Calendar className="w-4 h-4 text-[#A04E32] shrink-0 mt-1" />
               <div>
-                <div className="text-[10px] uppercase tracking-wider text-[#7A7569] font-medium">
+                <div className="text-[10px] uppercase tracking-wider text-[#67635A] font-medium">
                   {currentLang === 'ET' ? 'Parim aeg külastamiseks' : currentLang === 'RU' ? 'Лучшее время для визита' : 'Best Season to Visit'}
                 </div>
                 <div className="text-xs sm:text-sm font-medium text-[#181816] mt-0.5">
@@ -130,9 +130,9 @@ export const DestinationModal: React.FC<DestinationModalProps> = ({
             </div>
 
             <div className="flex items-start space-x-3">
-              <Compass className="w-4 h-4 text-[#B85A38] shrink-0 mt-1" />
+              <Compass className="w-4 h-4 text-[#A04E32] shrink-0 mt-1" />
               <div>
-                <div className="text-[10px] uppercase tracking-wider text-[#7A7569] font-medium">
+                <div className="text-[10px] uppercase tracking-wider text-[#67635A] font-medium">
                   {currentLang === 'ET' ? 'Reisistiil' : currentLang === 'RU' ? 'Стиль отдыха' : 'Travel Style'}
                 </div>
                 <div className="text-xs sm:text-sm font-medium text-[#181816] mt-0.5">
@@ -144,7 +144,7 @@ export const DestinationModal: React.FC<DestinationModalProps> = ({
 
           {/* Action Row */}
           <div className="pt-4 border-t border-[#ECE6DA] flex flex-col sm:flex-row items-center justify-between gap-4">
-            <span className="text-xs text-[#8C887B] text-center sm:text-left">
+            <span className="text-xs text-[#67635A] text-center sm:text-left">
               {currentLang === 'ET'
                 ? 'Iga teekond pannakse kokku vastavalt Sinu täpsetele soovidele.'
                 : currentLang === 'RU'

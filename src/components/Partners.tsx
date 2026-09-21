@@ -38,23 +38,27 @@ export const Partners: React.FC<PartnersProps> = ({ currentLang }) => {
 
           <div className="lg:col-span-7 lg:pt-10">
             <RevealOnScroll distance={12} threshold={0.12}>
-              <ul>
+              <ul className="grid grid-cols-2 xl:grid-cols-3 gap-3 sm:gap-4">
                 {partners.map((partner) => (
-                  <li key={partner.id} className="border-t border-[#ECE6DA] last:border-b">
+                  <li key={partner.id}>
                     <a
                       href={partner.href}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={getTranslation(partner.linkLabel, currentLang)}
-                      className="group flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 sm:gap-8 py-6 sm:py-7 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#A04E32] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FAF8F5]"
+                      title={partner.name}
+                      className="group relative flex h-28 sm:h-32 items-center justify-center rounded-2xl border border-[#ECE6DA] bg-white px-6 transition-all duration-300 hover:border-[#DDD5C7] hover:shadow-[0_12px_32px_rgba(24,24,22,0.07)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#A04E32] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FAF8F5]"
                     >
-                      <span className="font-serif text-2xl sm:text-3xl lg:text-[2.125rem] font-medium text-[#181816] tracking-tight group-hover:text-[#A04E32] transition-colors">
-                        {partner.name}
-                      </span>
-                      <span className="inline-flex items-center space-x-1.5 text-xs uppercase tracking-wider text-[#67635A] group-hover:text-[#A04E32] transition-colors shrink-0">
-                        <span>{getTranslation(translations.partners.visitSite, currentLang)}</span>
-                        <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                      </span>
+                      <img
+                        src={partner.logo}
+                        alt={partner.name}
+                        loading="lazy"
+                        className={`${partner.logoHeight} w-auto max-w-[85%] object-contain transition-transform duration-300 group-hover:scale-105`}
+                      />
+                      <ArrowUpRight
+                        aria-hidden="true"
+                        className="absolute right-3.5 top-3.5 h-3.5 w-3.5 text-[#67635A] opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100"
+                      />
                     </a>
                   </li>
                 ))}
