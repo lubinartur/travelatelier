@@ -4,6 +4,8 @@ import { Language } from '../types';
 import { company } from '../data/company';
 import { translations, getTranslation } from '../data/translations';
 import { useDialog } from '../hooks/useDialog';
+import { DatePicker, DateRange } from './DatePicker';
+import { addMonths, formatDepartureRange, formatNights, startOfDay } from '../lib/dates';
 
 interface TripPlannerModalProps {
   isOpen: boolean;
@@ -13,12 +15,23 @@ interface TripPlannerModalProps {
 }
 
 const MAX_ADULTS = 10;
-const MAX_CHILDREN = 8;
+const MAX_CHILDREN = 4;
+const MIN_NIGHTS = 3;
+const MAX_NIGHTS = 21;
+const MAX_MONTHS_AHEAD = 24;
 const MAX_CHILD_AGE = 17;
 
 const labelClass = 'block text-xs uppercase tracking-wider text-[#54514B] font-medium mb-2';
 const fieldClass =
   'w-full px-4 py-3 rounded-xl bg-white border border-[#DDD5C7] text-sm text-[#181816] focus:outline-none focus:border-[#B85A38] focus:ring-1 focus:ring-[#B85A38]';
+
+// Digits typed after the fixed +372 prefix; tolerates pasted "+372 ..." numbers.
+const sanitizePhone = (value: string) => {
+  const digits = value.replace(/\D/g, '');
+  return (digits.startsWith('372') ? digits.slice(3) : digits).slice(0, 10);
+};
+
+const sanitizeName = (value: string) => value.replace(/[0-9]/g, '');
 
 const range = (from: number, to: number) =>
   Array.from({ length: to - from + 1 }, (_, i) => from + i);
@@ -40,9 +53,9 @@ export const TripPlannerModal: React.FC<TripPlannerModalProps> = ({
   const [adults, setAdults] = useState('2');
   const [children, setChildren] = useState('0');
   const [childAges, setChildAges] = useState<string[]>([]);
-  const [dates, setDates] = useState('');
-  const [durationValue, setDurationValue] = useState('');
-  const [durationUnit, setDurationUnit] = useState<'nights' | 'days'>('nights');
+  const [departureRange, setDepartureRange] = useState<DateRange>({ start: null, end: null });
+  const [dateError, setDateError] = useState(false);
+  const [nights, setNights] = useState('');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -77,6 +90,11 @@ export const TripPlannerModal: React.FC<TripPlannerModalProps> = ({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!departureRange.start) {
+      setDateError(true);
+      document.getElementById('trip-departure')?.focus();
+      return;
+    }
     const tm = translations.tripModal;
     const line = (label: string, value: string) => `${label}: ${value.trim() || '—'}`;
     const styleLabel = getTranslation(
@@ -86,21 +104,17 @@ export const TripPlannerModal: React.FC<TripPlannerModalProps> = ({
     const agesText = childAges
       .map((age) => (age === '0' ? getTranslation(tm.childAgeUnderOne, currentLang) : age))
       .join(', ');
-    const durationUnitText = getTranslation(
-      durationUnit === 'nights' ? tm.durationNights : tm.durationDays,
-      currentLang
-    );
     const body = [
       line(getTranslation(tm.destinationLabel, currentLang), destination),
       line(getTranslation(tm.travelStyleLabel, currentLang), styleLabel),
       line(getTranslation(tm.adultsLabel, currentLang), adults),
       line(getTranslation(tm.childrenLabel, currentLang), children),
       ...(childCount > 0 ? [line(getTranslation(tm.childAgesLegend, currentLang), agesText)] : []),
-      line(getTranslation(tm.datesLabel, currentLang), dates),
-      line(getTranslation(tm.durationLabel, currentLang), `${durationValue} ${durationUnitText}`),
+      line(getTranslation(tm.datesLabel, currentLang), formatDepartureRange(departureRange.start, departureRange.end, currentLang)),
+      line(getTranslation(tm.durationLabel, currentLang), formatNights(Number(nights), currentLang)),
       line(getTranslation(tm.nameLabel, currentLang), name),
       line(getTranslation(tm.emailLabel, currentLang), email),
-      line(getTranslation(tm.phoneLabel, currentLang), phone),
+      line(getTranslation(tm.phoneLabel, currentLang), phone ? `+372 ${phone}` : ''),
       '',
       line(getTranslation(tm.notesLabel, currentLang), notes),
     ].join('\n');
@@ -294,53 +308,55 @@ export const TripPlannerModal: React.FC<TripPlannerModalProps> = ({
               </fieldset>
             )}
 
-            {/* Dates and length are separate on purpose: clients often give only one of them */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label htmlFor="trip-dates" className={labelClass}>
-                  {getTranslation(t.datesLabel, currentLang)}
-                  <Required />
-                </label>
-                <input
-                  id="trip-dates"
-                  type="text"
-                  required
-                  value={dates}
-                  onChange={(e) => setDates(e.target.value)}
-                  placeholder={getTranslation(t.datesPlaceholder, currentLang)}
-                  className={fieldClass}
-                />
-              </div>
+            {/* Departure date and trip length are separate on purpose: clients often give only one of them */}
+            <div>
+              <label htmlFor="trip-departure" className={labelClass}>
+                {getTranslation(t.datesLabel, currentLang)}
+                <Required />
+              </label>
+              <DatePicker
+                id="trip-departure"
+                lang={currentLang}
+                value={departureRange}
+                onChange={(range) => {
+                  setDepartureRange(range);
+                  setDateError(false);
+                }}
+                minDate={startOfDay(new Date())}
+                maxDate={addMonths(new Date(), MAX_MONTHS_AHEAD)}
+                placeholder={getTranslation(t.datesPlaceholder, currentLang)}
+                fieldClassName={fieldClass}
+                invalid={dateError}
+                describedBy={dateError ? 'trip-departure-error' : undefined}
+              />
+              {dateError && (
+                <p id="trip-departure-error" role="alert" className="mt-2 text-xs text-[#A04E32]">
+                  {getTranslation(t.dateRequiredError, currentLang)}
+                </p>
+              )}
+            </div>
 
-              <div>
-                <label htmlFor="trip-duration" className={labelClass}>
-                  {getTranslation(t.durationLabel, currentLang)}
-                  <Required />
-                </label>
-                <div className="flex gap-2">
-                  <input
-                    id="trip-duration"
-                    type="number"
-                    inputMode="numeric"
-                    min={1}
-                    max={60}
-                    required
-                    value={durationValue}
-                    onChange={(e) => setDurationValue(e.target.value)}
-                    placeholder={getTranslation(t.durationPlaceholder, currentLang)}
-                    className={`${fieldClass.replace('w-full','flex-1')} min-w-0`}
-                  />
-                  <select
-                    aria-label={getTranslation(t.durationUnitLabel, currentLang)}
-                    value={durationUnit}
-                    onChange={(e) => setDurationUnit(e.target.value as 'nights' | 'days')}
-                    className={`${fieldClass.replace('w-full','w-28')} shrink-0`}
-                  >
-                    <option value="nights">{getTranslation(t.durationNights, currentLang)}</option>
-                    <option value="days">{getTranslation(t.durationDays, currentLang)}</option>
-                  </select>
-                </div>
-              </div>
+            <div>
+              <label htmlFor="trip-duration" className={labelClass}>
+                {getTranslation(t.durationLabel, currentLang)}
+                <Required />
+              </label>
+              <select
+                id="trip-duration"
+                required
+                value={nights}
+                onChange={(e) => setNights(e.target.value)}
+                className={fieldClass}
+              >
+                <option value="" disabled>
+                  {getTranslation(t.durationPlaceholder, currentLang)}
+                </option>
+                {range(MIN_NIGHTS, MAX_NIGHTS).map((n) => (
+                  <option key={n} value={n}>
+                    {formatNights(n, currentLang)}
+                  </option>
+                ))}
+              </select>
             </div>
 
             {/* Contact info: Name, Email, Phone */}
@@ -356,7 +372,7 @@ export const TripPlannerModal: React.FC<TripPlannerModalProps> = ({
                   required
                   autoComplete="name"
                   value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  onChange={(e) => setName(sanitizeName(e.target.value))}
                   className={fieldClass}
                 />
               </div>
@@ -381,15 +397,23 @@ export const TripPlannerModal: React.FC<TripPlannerModalProps> = ({
                 <label htmlFor="trip-phone" className={labelClass}>
                   {getTranslation(t.phoneLabel, currentLang)}
                 </label>
-                <input
-                  id="trip-phone"
-                  type="tel"
-                  autoComplete="tel"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                  placeholder="+372 ..."
-                  className={fieldClass}
-                />
+                <div className="flex items-center w-full rounded-xl bg-white border border-[#DDD5C7] text-sm text-[#181816] focus-within:border-[#B85A38] focus-within:ring-1 focus-within:ring-[#B85A38]">
+                  <span className="pl-4 pr-1.5 select-none text-[#181816]" aria-hidden="true">
+                    +372
+                  </span>
+                  <input
+                    id="trip-phone"
+                    type="tel"
+                    inputMode="numeric"
+                    autoComplete="tel-national"
+                    pattern="[0-9]{7,10}"
+                    title={getTranslation(t.phoneInvalid, currentLang)}
+                    aria-label={`+372 ${getTranslation(t.phoneLabel, currentLang)}`}
+                    value={phone}
+                    onChange={(e) => setPhone(sanitizePhone(e.target.value))}
+                    className="min-w-0 flex-1 bg-transparent py-3 pr-4 focus:outline-none"
+                  />
+                </div>
               </div>
             </div>
 

@@ -61,6 +61,8 @@ export function useDialog({ isOpen, onClose, dialogRef, initialFocusRef }: UseDi
       if (!dialog) return;
 
       if (event.key === 'Escape') {
+        // A nested layer (e.g. the calendar) closes itself first.
+        if ((event.target as HTMLElement | null)?.closest?.('[data-escape-layer]')) return;
         event.preventDefault();
         event.stopPropagation();
         onCloseRef.current();

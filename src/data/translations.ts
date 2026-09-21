@@ -440,14 +440,14 @@ export const translations = {
       EN: 'under 1',
     },
     datesLabel: {
-      ET: 'Soovitud reisi kuupäevad',
-      RU: 'Желаемые даты поездки',
-      EN: 'Desired travel dates',
+      ET: 'Soovitud väljalennu kuupäevad',
+      RU: 'Желаемые даты вылета',
+      EN: 'Preferred departure dates',
     },
     datesPlaceholder: {
-      ET: 'Nt. 15.–20. juuni',
-      RU: 'Напр. 15–20 июня',
-      EN: 'E.g. 15–20 June',
+      ET: 'Vali kuupäevade vahemik',
+      RU: 'Выберите диапазон дат',
+      EN: 'Choose a date range',
     },
     durationLabel: {
       ET: 'Reisi kestus',
@@ -455,24 +455,9 @@ export const translations = {
       EN: 'Trip length',
     },
     durationPlaceholder: {
-      ET: 'Nt. 7',
-      RU: 'Напр. 7',
-      EN: 'E.g. 7',
-    },
-    durationUnitLabel: {
-      ET: 'Kestuse ühik',
-      RU: 'Единица продолжительности',
-      EN: 'Length unit',
-    },
-    durationNights: {
-      ET: 'ööd',
-      RU: 'ночей',
-      EN: 'nights',
-    },
-    durationDays: {
-      ET: 'päeva',
-      RU: 'дней',
-      EN: 'days',
+      ET: 'Vali kestus',
+      RU: 'Выберите продолжительность',
+      EN: 'Choose trip length',
     },
     mailSubject: {
       ET: 'Reisipäring: {destination}',
@@ -483,6 +468,36 @@ export const translations = {
       ET: 'sihtkoht selgub',
       RU: 'направление обсуждается',
       EN: 'destination open',
+    },
+    dateRequiredError: {
+      ET: 'Palun vali väljalennu kuupäevad.',
+      RU: 'Пожалуйста, выберите даты вылета.',
+      EN: 'Please choose your departure dates.',
+    },
+    calendarLabel: {
+      ET: 'Väljalennu kuupäevade valik',
+      RU: 'Выбор дат вылета',
+      EN: 'Departure dates picker',
+    },
+    calendarHint: {
+      ET: 'Vali esimene ja viimane sobiv väljalennupäev.',
+      RU: 'Выберите первый и последний подходящий день вылета.',
+      EN: 'Choose the first and last day you could depart.',
+    },
+    calendarPrevMonth: {
+      ET: 'Eelmine kuu',
+      RU: 'Предыдущий месяц',
+      EN: 'Previous month',
+    },
+    calendarNextMonth: {
+      ET: 'Järgmine kuu',
+      RU: 'Следующий месяц',
+      EN: 'Next month',
+    },
+    phoneInvalid: {
+      ET: 'Sisesta ainult numbrid (7–10 numbrit pärast +372).',
+      RU: 'Введите только цифры (7–10 цифр после +372).',
+      EN: 'Enter digits only (7–10 digits after +372).',
     },
     requiredNote: {
       ET: 'Tärniga (*) väljad on kohustuslikud.',
